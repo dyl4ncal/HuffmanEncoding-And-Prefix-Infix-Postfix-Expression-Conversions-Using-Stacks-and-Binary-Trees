@@ -4,6 +4,9 @@ import expressiontobt.ExpressionToBinaryTree;
 import huffmancode.HuffmanEncoding;
 import infixtopostfix.InfixToPostfixConversion;
 import java.util.Scanner;
+import testing.ExpressionToBinaryTreeUnitTests;
+import testing.HuffmanEncodingUnitTests;
+import testing.InfixToPostfixConversionUnitTests;
 
 /**
  * A menu for the user to select and use different programs.
@@ -35,7 +38,7 @@ public class UserInterface
                     ExpressionToBinaryTree.performExpressionConversion();
                     break;
                 case "4":
-                    runAllUnitTests();
+                    runTests();
                     break;
                 case "5":
                     System.exit(0);
@@ -47,9 +50,11 @@ public class UserInterface
         }
     }
     
-    //Method to run all unit tests at once.
-    public static void runAllUnitTests()
+    //Method to run all program's unit tests at once.
+    public static void runTests()
     {
-        //HasherUnitTests.runAllUnitTests();
+        HuffmanEncodingUnitTests.runTests();
+        InfixToPostfixConversionUnitTests.runTests();
+        ExpressionToBinaryTreeUnitTests.runTests();
     }
 }

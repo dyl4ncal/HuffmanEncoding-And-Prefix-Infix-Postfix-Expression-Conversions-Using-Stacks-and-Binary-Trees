@@ -17,11 +17,11 @@ public class InfixToPostfixConversion
     //Converts a user inputted expression into postfix notation.
     public static void performExpressionConversion()
     {
-        System.out.println("Enter a fully parenthesized infix arithmetic expression[ E.g. (((5+2)*(8-3))/4)  ]: ");
+        System.out.println("Enter a fully parenthesized infix arithmetic expression[ E.g. (((5+2)*(8-3))/4) ]: ");
         String input = userInput.next();
         setInfixExpression(input);
         
-        System.out.println("Equivalent postfix notation( E.g. 52+83-*4/ ): ");
+        System.out.println("Equivalent postfix notation[ E.g. 52+83-*4/ ]: ");
         System.out.println(convertInfixToPostfix(infixExpression));
     }
    
@@ -127,3 +127,29 @@ public class InfixToPostfixConversion
         return postfixExp.toString();
     }
 }
+/*
+run:
+
+Main Menu:
+----------
+1. Huffman Encoding Program
+2. Infix to Postfix Program
+3. Expression to Expression Tree Program
+4. Run Unit Tests
+5. Exit
+2
+Enter a fully parenthesized infix arithmetic expression[ E.g. (((5+2)*(8-3))/4) ]: 
+(1+((61/(3+6))*7))
+Equivalent postfix notation[ E.g. 52+83-*4/ ]: 
+16136+/7*+
+
+Main Menu:
+----------
+1. Huffman Encoding Program
+2. Infix to Postfix Program
+3. Expression to Expression Tree Program
+4. Run Unit Tests
+5. Exit
+5
+BUILD SUCCESSFUL (total time: 11 seconds)
+*/

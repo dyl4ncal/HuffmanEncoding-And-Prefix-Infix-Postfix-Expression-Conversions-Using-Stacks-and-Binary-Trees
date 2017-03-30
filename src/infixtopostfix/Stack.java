@@ -7,8 +7,8 @@ package infixtopostfix;
  */
 public class Stack 
 {
-    private char[] stack;
-    private int topCurser;
+    private static char[] stack;
+    private static int topCurser;
     
     public Stack(int stackSize)
     {
@@ -17,19 +17,19 @@ public class Stack
     }
     
     //Returns true if stack is empty.
-    public boolean isEmpty()
+    public static boolean isEmpty()
     {
         return topCurser == -1;
     }
     
     //Returns true if stack is full.
-    public boolean isFull()
+    public static boolean isFull()
     {
         return topCurser == stack.length-1;
     }
     
     //Adds an element to the top of the stack.
-    public void push(char character)
+    public static void push(char character)
     {
         if(!isFull())
         {
@@ -41,7 +41,7 @@ public class Stack
     }
 
     //Pops the top of the stack and returns the element.
-    public char pop()
+    public static char pop()
     {
         char element;
         
@@ -58,7 +58,7 @@ public class Stack
     }
     
     //Returns the top of the stack without removing it.
-    public char lookAtTop()
+    public static char lookAtTop()
     {
         char element;
         

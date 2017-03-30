@@ -49,7 +49,7 @@ public class ExpressionToBinaryTree
     //Gets the fully parenthesized expression from the user.
     public static void setUserInput()
     {
-        System.out.println("Enter a fully parenthesized arithmetic expression[ E.g. (1+((61/(3+6))*7)) ]\n");
+        System.out.println("Enter a fully parenthesized arithmetic expression[ E.g. (1+((61/(3+6))*7)) ]:");
         String input = userInput.next();
         setUserExpression(input);
     }
@@ -146,3 +146,34 @@ public class ExpressionToBinaryTree
         }    
     }
 }
+/*
+run:
+
+Main Menu:
+----------
+1. Huffman Encoding Program
+2. Infix to Postfix Program
+3. Expression to Expression Tree Program
+4. Run Unit Tests
+5. Exit
+3
+Enter a fully parenthesized arithmetic expression[ E.g. (1+((61/(3+6))*7)) ]:
+(((5+2)*(8-3))/4)
+Binary expression tree constructed.
+
+Equivalent Notations:
+
+Prefix: /*+52-834
+Infix: 5+2*8-3/4
+Postfix: 52+83-*4/
+
+Main Menu:
+----------
+1. Huffman Encoding Program
+2. Infix to Postfix Program
+3. Expression to Expression Tree Program
+4. Run Unit Tests
+5. Exit
+5
+BUILD SUCCESSFUL (total time: 6 seconds)
+*/
